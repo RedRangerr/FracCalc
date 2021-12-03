@@ -1,0 +1,28 @@
+{
+  "files": {
+    "fracCalc/FracCalc.java": [
+      {
+        "id": "0bd80493-ae77-4d25-af2e-fd554e03dadf",
+        "line": 14,
+        "version": 450,
+        "index": 446
+      }
+    ],
+    "fracCalc/Number.java": [
+      {
+        "id": "04d9087c-2f72-4cfc-b4f1-1419f3e743fd",
+        "line": 21,
+        "version": 886,
+        "index": 400
+      }
+    ],
+    "fracCalc/Parser.java": [
+      {
+        "id": "6aa461be-6cd4-4ccc-807d-aba9d2417f33",
+        "line": 21,
+        "version": 1960,
+        "index": 516
+      }
+    ]
+  }
+}

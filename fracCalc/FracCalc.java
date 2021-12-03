@@ -4,7 +4,9 @@ public class FracCalc {
 
     public static void main(String[] args) 
     {
+      String s = "-38_3/72 / -4_82/37";
         // TODO: Read the input from the user and call produceAnswer with an equation
+      System.out.println(produceAnswer(s));
 
     }
     
@@ -19,8 +21,9 @@ public class FracCalc {
     public static String produceAnswer(String input)
     { 
         // TODO: Implement this function to produce the solution to the input
-        
-        return "";
+        // String s = Parser.FindLastOperand(input);
+        // System.out.println("Loas operand: "+s);
+        return Parser.FindExpressions(input).toString();
     }
 
     // TODO: Fill in the space below with any helper methods that you think you will need
