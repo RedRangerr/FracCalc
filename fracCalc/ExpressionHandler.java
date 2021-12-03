@@ -13,8 +13,6 @@ public class ExpressionHandler
     this.numOne = numOne;
     this.numTwo = numTwo;
     this.operation = operation;
-    System.out.println("Number 1 decimal: "+numOne.getNumber());
-    System.out.println("Number 2 decimal: "+numTwo.getNumber());
   }
 
   public double HandleOperation()

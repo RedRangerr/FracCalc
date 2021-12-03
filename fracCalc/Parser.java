@@ -8,7 +8,6 @@ public class Parser
   public static String FindLastOperand(String expression)
   {
     return expression.substring(expression.indexOf(" ")+3, expression.length());
-    // return expression.substring(0, expression.indexOf(" ")); first operand
   }
 
   public static ExpressionHandler FindExpressions(String expression)
@@ -20,8 +19,6 @@ public class Parser
       {
         Number numOne = ParseMixedNum(expression.substring(0, i-1));
         Number numTwo = ParseMixedNum(expression.substring(i+2, expression.length()));
-        System.out.println("Num 1 string: "+numOne);
-        System.out.println("Num 2 string: "+numTwo);
         return new ExpressionHandler(numOne, numTwo, Operation.Add);
       }
 

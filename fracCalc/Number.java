@@ -24,18 +24,14 @@ public class Number
     //||  
     if (wholeNumberString.charAt(0) == '-')
     {
-      System.out.println(wholeNumber + " IS NEGATIVE!");
       isNegative = true;
       wholeNumberString = wholeNumber.substring(1);
-      System.out.println("Whole Number String: "+ wholeNumberString);
     }
 
     if (numeratorString.charAt(0)=='-')
     {
-      System.out.println(numerator + " IS NEGATIVE!");
       isNegative = true;
       numeratorString = numerator.substring(1);
-      System.out.println("Numerator String: "+ numeratorString);
     }
   }
   
@@ -111,12 +107,7 @@ public class Number
   public double getNumber()
   {
     double finalNum = 0;
-   // System.out.println("Whole number:"+parseInteger(wholeNumberString));
     finalNum += parseInteger(getWholeNumberString());
-    //System.out.println("Denominator string:"+denominatorString);
-    //System.out.println("Numerator int:"+parseInteger(numeratorString));
-    //System.out.println("Denominator int:"+parseInteger(denominatorString));
-   // System.out.println("Decimal: "+(double)parseInteger(numeratorString)/parseInteger(denominatorString));
     finalNum += (double)parseInteger(getNumeratorString())/parseInteger(getDenominatorString());
     if (isNegative) return finalNum * -1;
     return finalNum;
