@@ -35,14 +35,24 @@ public class ExpressionHandler
   public String toString()
   {
     if ((int)HandleOperation() == HandleOperation()) return ""+(int)HandleOperation();
-    return (int)HandleOperation()+"_"+convertDecimalToFraction(HandleOperation() - (int)HandleOperation());
+
+    if ((int)HandleOperation() != 0)
+    {
+      return (int)HandleOperation()+"_"+convertDecimalToFraction(HandleOperation() - (int)HandleOperation());
+    }
+
+    if (HandleOperation() - (int)HandleOperation() < 0)
+    {
+      return "-"+convertDecimalToFraction(HandleOperation() - (int)HandleOperation());
+    }
+    return convertDecimalToFraction(HandleOperation() - (int)HandleOperation());
   }
 
   private static String convertDecimalToFraction(double x){
     if (x < 0){
-        return convertDecimalToFraction(-x);
+      return convertDecimalToFraction(-x);
     }
-    double tolerance = 1.0E-9;
+    double tolerance = 1.0E-7;
     double h1=1; 
     double h2=0;
     double k1=0; 

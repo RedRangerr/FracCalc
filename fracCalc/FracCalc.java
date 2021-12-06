@@ -4,7 +4,7 @@ public class FracCalc {
 
     public static void main(String[] args) 
     {
-      String s = "-38_3/72 / -4_82/37";
+      String s = "-1 - 1/10";
         // TODO: Read the input from the user and call produceAnswer with an equation
       System.out.println(produceAnswer(s));
 
@@ -23,9 +23,41 @@ public class FracCalc {
         // TODO: Implement this function to produce the solution to the input
         // String s = Parser.FindLastOperand(input);
         // System.out.println("Loas operand: "+s);
-        return Parser.FindExpressions(input).toString();
+        if (RunDivideZeroCheck(input))
+        {
+          return Parser.FindExpressions(input).toString();          
+        }
+        else
+        {
+          return "Error: Cannot divide by zero.";
+        }
     }
 
+    public static boolean RunDivideZeroCheck(String input)
+    {
+      for(int i = 0; i < input.length(); i++)
+      {
+        if (input.charAt(i) == '/')
+        {
+          try
+          {
+            if (input.charAt(i + 1) == '0')
+            {
+              return false;
+            }
+            if (input.charAt(i + 2) == '0' && input.charAt(i + 1) == ' ')
+            {
+              return false;
+            }
+          }
+          catch (Exception e)
+          {
+            continue;
+          }
+        }
+      }
+    return true;
+    }
     // TODO: Fill in the space below with any helper methods that you think you will need
     
 }
