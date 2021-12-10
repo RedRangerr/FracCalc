@@ -48,6 +48,7 @@ public class ExpressionHandler
     return convertDecimalToFraction(HandleOperation() - (int)HandleOperation());
   }
 
+  // https://jonisalonen.com/2012/converting-decimal-numbers-to-ratios/ 
   private static String convertDecimalToFraction(double x){
     if (x < 0){
       return convertDecimalToFraction(-x);

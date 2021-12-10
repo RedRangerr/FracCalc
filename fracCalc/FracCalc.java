@@ -1,12 +1,21 @@
 package fracCalc;
+import java.util.*;
 
 public class FracCalc {
 
+    private static final Scanner sc = new Scanner(System.in);
+
     public static void main(String[] args) 
     {
-      String s = "-1 - 1/10";
+      while(true)
+      {
+        System.out.println("Enter an operation:");
+        String input = sc.nextLine();
+        if (input.equals("quit")) break;
+        System.out.println(produceAnswer(input));
+      }
+
         // TODO: Read the input from the user and call produceAnswer with an equation
-      System.out.println(produceAnswer(s));
 
     }
     
